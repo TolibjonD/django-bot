@@ -39,4 +39,4 @@ async def feedback_2(message: types.Message, state: FSMContext):
 
 
 if __name__ == "__main__":
-    executor.start_polling(dispatcher=dp)
+    executor.start_polling(dispatcher=dp, skip_updates=True)
