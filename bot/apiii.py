@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = "http://localhost:8000/api/v1"
+BASE_URL = "http://saidqodirovchat.pythonanywhere.com/api/v1"
 
 
 def create_user(username, name, user_id):
