@@ -14,7 +14,7 @@ def create_user(username, name, user_id):
             user_exist = True
             break
     if user_exist == False:
-        post = requests.post(
+        requests.post(
             url=url, data={"username": username, "name": name, "user_id": user_id}
         )
         return "Foydalanuvchi yaratildi."
@@ -25,7 +25,7 @@ def create_user(username, name, user_id):
 def create_feedback(user_id, body):
     url = f"{BASE_URL}/feedbacks/"
     if body and str(user_id):
-        post = requests.post(url=url, data={"user_id": user_id, "body": body})
+        requests.post(url=url, data={"user_id": user_id, "body": body})
         return "Adminga yuborildi fikringiz uchun taashakkur !..."
     else:
         return "Amal oxiriga yetmadi"
