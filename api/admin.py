@@ -6,7 +6,6 @@ from .models import BotUsers, Feedbacks
 
 class CustomBotUserAdmin(admin.ModelAdmin):
     model = BotUsers
-    list_display = ["username", "name", "user_id"]
     search_fields = ["username", "name"]
     list_filter = ["created_at"]
 
